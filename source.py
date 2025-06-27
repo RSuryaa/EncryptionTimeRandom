@@ -1,8 +1,8 @@
 from cryptography.fernet import Fernet
 
-def encrypt_message(message_decrypter_version, key):
+def encrypt_message(string_message, key):
     fernet = Fernet(key)
-    return fernet.encrypt(message_decrypter_version.encode())
+    return fernet.encrypt(string_message.encode())
 
 def decrypt_message(message_encrypted_version, key):
     fernet = Fernet(key)
